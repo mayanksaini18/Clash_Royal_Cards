@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash Royale Cards</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+        body {
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/coc-background.jpg') no-repeat center fixed;
+            background-size: cover;
+            font: 14px/20px "Lato", Arial, sans-serif;
+            color: #9E9E9E;
+            margin-top: 30px;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(3, 2fr);
+            
+            justify-content: center;
+        }
+
+        .wrapper {
+           
+            border-radius: 20px;
+            perspective: 1000px;
+            width: 400px;
+            height: 500px;
+            margin: 40px;
+            
+        }
+
+        .clash-card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        .wrapper:hover .clash-card {
+            
+            transform: rotateY(180deg);
+        }
+
+        .clash-card__front,
+        .clash-card__back {
+            backface-visibility: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .clash-card__back {
+            transform: rotateY(180deg);
+        }
+
+        .clash-card__image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .clash-card__unit-name {
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            background: linear-gradient(to right, #ff6b6b, #f8e71c);
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .clash-card__unit-description {
+            font-size: 17px;
+            text-align: justify;
+            padding: 15px;
+            color: #555;
+        }
+
+
+       
+        .clash-card__stats {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .clash-card__stats div {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="clash-card">
+            <!-- Front Side -->
+            <div class="clash-card__front">
+                <div class="clash-card__image">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian.png" alt="Barbarian">
+                </div>
+                <div class="clash-card__unit-name">The Barbarian</div>
+                <div class="clash-card__unit-description">
+                    The Barbarian is a kilt-clad Scottish warrior with an angry, battle-ready expression, hungry for destruction.
+                </div>
+            </div>
+            <!-- Back Side -->
+            <div class="clash-card__back">
+                <div class="clash-card__unit-name">The Barbarian</div>
+                <div class="clash-card__stats">
+                    <div><strong>Hit Points:</strong> 1500</div>
+                    <div><strong>Damage:</strong> 150</div>
+                    <div><strong>Speed:</strong> Medium</div>
+                    <div><strong>Special Ability:</strong> Frenzy Mode - Double damage below 20% HP.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="clash-card">
+            <div class="clash-card__front">
+                <div class="clash-card__image">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer.png" alt="Archer">
+                </div>
+                <div class="clash-card__unit-name">The Archer</div>
+                <div class="clash-card__unit-description">
+                    The Archer is a female warrior with sharp eyes. She wears a short, light green dress and a hooded cape.
+                </div>
+            </div>
+            <div class="clash-card__back">
+                <div class="clash-card__unit-name">The Archer</div>
+                <div class="clash-card__stats">
+                    <div><strong>Hit Points:</strong> 800</div>
+                    <div><strong>Damage:</strong> 120</div>
+                    <div><strong>Speed:</strong> Fast</div>
+                    <div><strong>Special Ability:</strong> Long Range - Attack from a safe distance.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="clash-card">
+            <div class="clash-card__front">
+                <div class="clash-card__image">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant.png" alt="Giant">
+                </div>
+                <div class="clash-card__unit-name">The Giant</div>
+                <div class="clash-card__unit-description">
+                    Slow, steady, and powerful, Giants are massive warriors that soak up huge amounts of damage.
+                </div>
+            </div>
+            <div class="clash-card__back">
+                <div class="clash-card__unit-name">The Giant</div>
+                <div class="clash-card__stats">
+                    <div><strong>Hit Points:</strong> 3000</div>
+                    <div><strong>Damage:</strong> 200</div>
+                    <div><strong>Speed:</strong> Slow</div>
+                    <div><strong>Special Ability:</strong> Building Smasher - Deals extra damage to buildings.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper" >
+        <div class="clash-card goblin">
+            <div class="clash-card__front">
+                <div class="clash-card__image">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin.png" alt="goblin" />
+                </div>
+                <div class="clash-card__unit-name">The Goblin</div>
+            <div class="clash-card__unit-description">
+                These pesky little creatures only have eyes for one thing: LOOT! They are faster than a Spring Trap,
+                and their hunger for resources is limitless.
+            </div>
+            </div>
+            <div class="clash-card__back">
+                <div class="clash-card__unit-name">The Goblin</div>
+                <div class="clash-card__stats">
+                    <div><strong>Hit Points:</strong> 500</div>
+                    <div><strong>Damage:</strong> 90</div>
+                    <div><strong>Speed:</strong> Very Fast</div>
+                    <div><strong>Special Ability:</strong> Loot Raider - Steals extra resources when attacking buildings.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="clash-card">
+            <div class="clash-card__front">
+                <div class="clash-card__image">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard.png" alt="Wizard">
+                </div>
+                <div class="clash-card__unit-name">The Wizard</div>
+                <div class="clash-card__unit-description">
+                    The Wizard is a terrifying presence on the battlefield. Cast concentrated blasts of destruction on anything, land or sky!
+                </div>
+            </div>
+            <div class="clash-card__back">
+                <div class="clash-card__unit-name">The Wizard</div>
+                <div class="clash-card__stats">
+                    <div><strong>Hit Points:</strong> 800</div>
+                    <div><strong>Damage:</strong> 200 (Splash Damage)</div>
+                    <div><strong>Speed:</strong> Medium</div>
+                    <div><strong>Special Ability:</strong> Fireball Blast - Deals splash damage to multiple enemies at once.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+
+</html>
