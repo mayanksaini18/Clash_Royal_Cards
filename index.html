@@ -31,6 +31,7 @@
             width: 320px;
             height: 450px;
             margin-bottom: 20px;
+            perspective: 1000px; /* Enables 3D perspective for flipping */
 
         }
 
@@ -226,6 +227,19 @@
             </div>
         </div>
     </main>
+
+    
+         <script>
+        // Add onclick event to each card
+        const cards = document.querySelectorAll('.clash-card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped'); // Toggle the 'flipped' class
+            });
+        });
+    </script>
+    
 
 </body>
 
